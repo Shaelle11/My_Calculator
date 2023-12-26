@@ -1,64 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mode Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="body">
     <div class="container">
-<div class="Calculator">
-    <div class="top">
-   <div class="toggle">
-    <button class="mode_toggle">
-        <div class="bulb"></div>
-        <div  onclick="switchMode()" class="press"></div>
-        <div class="darkicon"></div>
-                </button>
-                
-   </div>
-      <div class="current operand">
-        <input class="displaystyle" type="text" id="display" name="display">
-        <input class="answer" type="text" id="answer" value="" readonly>
-      </div>
-    </div>
-    <form class="bottom">
-        <div class="first_line">
-     <input class="input top" type="button" value="C" onclick= "display.value = '', answer.value= ''">
-        <input class="input top" type="button" value="+/-" onclick ="display.value *= -1 " >
-        <input class="input top" type="button" value="%" onclick ="display.value /= 100 ">
-        <input class="input top" type="button" value="÷"  onclick ="display.value += '/' ">
+        <div class="Calculator">
+            <div class="top">
+                <div class="toggle">
+                    <button class="mode_toggle">
+                        <div class="bulb"></div>
+                        <div onclick="switchMode()" class="press"></div>
+                        <div class="darkicon"></div>
+                    </button>
+
+                </div>
+                <div class="current operand">
+                    <input class="displaystyle" type="text" id="display" name="display">
+                    <input class="answer" type="text" id="answer" value="" readonly>
+                </div>
+            </div>
+            <form class="bottom">
+                <div class="first_line">
+                    <input class="input top" type="button" value="C" onclick="display.value = '', answer.value= ''">
+                    <input class="input top" type="button" value="+/-" onclick="display.value *= -1 ">
+                    <input class="input top" type="button" value="%" onclick="display.value /= 100 ">
+                    <input class="input top" type="button" value="÷" onclick="display.value += '/' ">
+                </div>
+                <div>
+                    <input class="input" type="button" value="7" onclick="display.value += '7' ">
+                    <input class="input" type="button" value="8" onclick="display.value += '8'">
+                    <input class="input " type="button" value="9" onclick="display.value += '9' ">
+                    <input class="input" type="button" value="x" onclick="display.value += '*' ">
+                </div>
+                <div>
+                    <input class="input" type="button" value="4" onclick="display.value += '4' ">
+                    <input class="input" type="button" value="5" onclick="display.value += '5' ">
+                    <input class="input" type="button" value="6" onclick="display.value += '6' ">
+                    <input class="input" type="button" value="-" onclick="display.value += '-' ">
+                </div>
+                <div>
+                    <input class="input" type="button" value="1" onclick="display.value += '1' ">
+                    <input class="input" type="button" value="2" onclick="display.value += '2' ">
+                    <input class="input" type="button" value="3" onclick="display.value += '3' ">
+                    <input class="input" type="button" value="+" onclick="display.value += '+' ">
+                </div>
+                <div>
+                    <input class="input" type="button" value="." onclick="display.value += '.'">
+                    <input class="input" type="button" value="0" onclick="display.value += '0'">
+                    <span class="input">
+                        <input class="lightclear" type="button" value=""
+                            onclick="display.value = display.value.toString().slice(0, -1)">
+                    </span>
+                    <input class="input" type="button" value="=" onclick="answer.value = eval(display.value)">
+                </div>
+            </form>
         </div>
-            <div>
-                <input class="input" type="button" value="7" onclick ="display.value += '7' ">
-                <input class="input" type="button" value="8" onclick="display.value += '8'">
-                <input class="input " type="button" value="9" onclick ="display.value += '9' ">
-                <input class="input" type="button" value="x" onclick ="display.value += '*' ">
-            </div>
-            <div>
-                <input class="input" type="button" value="4" onclick ="display.value += '4' ">
-                <input class="input" type="button" value="5" onclick ="display.value += '5' ">
-                <input class="input" type="button" value="6" onclick ="display.value += '6' ">
-                <input class="input" type="button" value="-" onclick ="display.value += '-' ">
-            </div>
-            <div>
-                <input class="input" type="button" value="1" onclick ="display.value += '1' ">
-                <input class="input" type="button" value="2" onclick ="display.value += '2' ">
-                <input class="input" type="button" value="3"  onclick ="display.value += '3' ">
-                <input class="input" type="button" value="+"  onclick ="display.value += '+' "> 
-            </div>
-            <div>
-                <input class="input" type="button" value="." onclick ="display.value += '.'">
-                <input class="input" type="button" value="0" onclick ="display.value += '0'">
-               <span class="input"> 
-                <input class="lightclear" type="button" value="" onclick="display.value = display.value.toString().slice(0, -1)">
-               </span>
-                <input class="input" type="button" value="=" onclick="answer.value = eval(display.value)">
-            </div>
-            </div>
-        </form>
     </div>
     <script src="./index.js"></script>
 </body>
+
 </html>
